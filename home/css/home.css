@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --dark1: #1B2531;
+    --medium: #699dff;
+    --dark2: #283142;
+    --light: #88B8D7;
+    --normal: #3B70E0;
+    --font: 'Wix Madefor Display', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: var(--font);
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    padding: 10px 20px;
+    background-color: var(--dark1);
+    border-bottom: 2px solid #88B8D7;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+div>ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+div>ul>li>a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#menu {
+    display: none;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    transition: 0.4s;
+}
+
+#menu:hover {
+    color: var(--normal);
+}
+
+@media screen and (max-width: 700px) {
+    div>ul {
+        display: none;
+    }
+    #menu {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    header {
+        display: flex;
+        justify-content: space-around;
+    }
+    nav {
+        display: none;
+    }
+}
+
+#navbar {
+    background-color: #3B70E0;
+    transition: 0.4s;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.773);
+}
+
+nav>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav>ul>li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #1B2531;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+nav>ul>li:hover {
+    background-color: #1B2531;
+
+}
+
+nav>ul>li>a {
+    color: white;
+    text-shadow: 0px 0px 2px black;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    min-height: 70vh;
+}
+
+@media screen and (min-width: 700px) {
+    nav {
+        display: none;
+        background-color: red;
+    }
+}

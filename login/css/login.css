@@ -1,0 +1,236 @@
+@charset "UTF=8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+#null {
+    display: none;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+:root {
+    --dark1: #1B2531;
+    --medium: #699dff;
+    --dark2: #283142;
+    --light: #88B8D7;
+    --normal: #3B70E0;    
+    --font: 'Roboto', sans-serif;
+    /* --dark1: #3E79EB; */
+
+}
+
+
+
+body {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    font-family: var(--font);
+    background-color: #1B2531;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+#section-primary {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 10px;
+    width: 70%;
+}
+
+#section-primary > div > nav > p {
+    color: #b4bed2;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+#section-primary > div > nav > p > a {
+    color: #0057f8;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+#section-primary > div > nav > p > a:hover {
+    color: #699dff;
+}
+
+#section-primary > div > nav > h1 {
+    font-size: 30px;
+    color: #d6d7dc;
+}
+
+#section-primary > div {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.box-input > span {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 30vw;
+}
+
+
+
+#box-submit {
+    width: 30vw;
+}
+
+label::before {
+    content: '* ';
+    color: red;
+}
+
+label {
+    color: white;
+    padding-left: 2px;
+    font-size: 15px;
+}
+
+.box-input > span > input {
+    color: #b4bed2;
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px 10px 30px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1px solid #4d5b75;
+    background-color: #283142;
+    transition: 0.4s;
+}
+
+.box-input > span > input:focus {
+    border: 1px solid #2a59d1;
+    box-shadow: 0px 0px 3px 1px rgba(42, 89, 209, 0.958);
+}
+
+.box-input > p {
+    display: none;
+    font-size: 12px;
+    margin-left: 5px;
+    color: red;
+}
+
+.icon {
+    position: absolute;
+    padding-left: 10px;
+    font-size: 17px;
+}
+
+.olho {
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    height: min-content;
+    color: #2672ff;
+    cursor: pointer;
+    transition: 0.4s;
+
+}
+
+.olho:hover{
+    color: black;
+}
+
+
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #3e79f7;
+    border-color: #3e79f7;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+
+input[type="submit"]:hover {
+    background-color: #2a59d1;
+    border-color: #2a59d1;
+}
+
+#section-secundary {
+    background-color: white;
+    height: 100vh;
+    width: 35%;
+    background-image: url(https://app.congenial.com.br/img/login-background.jpg);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#section-secundary > h2 {
+    color: white;
+    text-align: right;
+    padding: 10px 20px 10px 10px;
+}
+
+#box-img {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#box-img > img {
+    width: 60%;
+}
+
+#box-welcome {
+    padding: 0px 0px 15px 20px;
+    color: white;
+    text-shadow: 0px 0px 1px black;
+}
+
+
+@media screen and (max-width: 995px) {
+    body {
+    overflow: hidden;
+    }
+    .box-input > span {
+        width: 70vw;
+    }
+    #section-primary {
+        width: 100%;
+    }
+    #section-secundary {
+        display: none;
+    }
+
+    #box-submit {
+        width: 70vw;
+    }
+}

@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #1b2531af;
+    display: none;
+}
+
+#bg {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.601);
+    height: 115vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+body {
+    background-color: #42EEDC;
+}
+
+main {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+table {
+    background-color: white;
+    width: 90vw;
+    border-collapse: collapse;
+    margin-top: 5%;
+}
+
+caption {
+    background-color: #1B2531;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+th {
+    background-color: #bac9db;
+    padding: 3px;
+}
+
+tr {
+    text-align: center;
+    border: 1px solid rgba(11, 11, 11, 0.396);
+}
+
+tr:nth-child(2n) {
+    background-color: #0073ff3b;
+}
+
+tbody > tr > td {
+    padding: 5px 3px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+tbody > tr > td > p{
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+
+button {
+    border: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+button > svg {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.450);
+    padding: 5px;
+}
+
+button > .editarBtn {
+    background-color: rgb(0, 160, 255);
+    color: white;
+}
+
+button > .deletarBtn {
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
